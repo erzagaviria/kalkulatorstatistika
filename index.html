@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Statistika</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Menghubungkan dengan styles.css -->
+    <script src="calculator.js" defer></script> <!-- Menghubungkan dengan calculator.js -->
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Statistika</h1>
+
+        <div id="input-section" class="input-section">
+            <label for="dataCount">Masukkan jumlah data:</label>
+            <input type="number" id="dataCount" min="1" placeholder="Masukkan jumlah data">
+            <button class="primary-button" onclick="getDataCount()">Submit</button>
+        </div>
+
+        <div id="data-input-section" class="data-input-section" style="display: none;">
+            <h3>Input Angka:</h3>
+            <div id="numberInputs" class="number-inputs"></div>
+            <button class="primary-button" onclick="submitNumbers()">Submit Data</button>
+        </div>
+
+        <div id="data-header" class="data-header" style="display: none;">
+            <h3>Data yang Diinput:</h3>
+            <p id="dataDisplay"></p>
+        </div>
+
+        <div id="analysis-menu" class="analysis-menu" style="display: none;">
+            <h3>--- Menu Analisis Statistika ---</h3>
+            <button class="secondary-button" onclick="calculateMean()">Hitung Rata-rata (Mean)</button>
+            <button class="secondary-button" onclick="calculateMode()">Hitung Modus</button>
+            <button class="secondary-button" onclick="calculateMedian()">Hitung Median</button>
+            <button class="secondary-button" onclick="calculateMidrange()">Hitung Midrange</button>
+            <button class="secondary-button" onclick="calculateMidhinge()">Hitung Midhinge</button>
+            <button class="secondary-button" onclick="calculateQuartiles()">Hitung Kuartil (Q1, Q2, Q3)</button>
+            <button class="secondary-button" onclick="calculateIQR()">Hitung Jangkauan Antar Kuartil (IQR)</button>
+            <button class="secondary-button" onclick="stemAndLeaf()">Tampilkan Diagram Stem-and-Leaf</button>
+            <button class="secondary-button" onclick="boxWhiskerPlot()">Tampilkan Box-Whisker Plot</button>
+        </div>
+
+        <div id="result" class="result-section"></div>
+    </div>
+</body>
+</html>
